@@ -6,30 +6,12 @@ const HeaderSection = ({ data, onChange, totalAmount }) => {
     useEffect(() => {
         const voucherNumber = generateRandomVrNo();
         setRandomVrNo(voucherNumber);
-        // calculateAndSetAccountAmount();
     }, []);
 
     useEffect(() => {
       // Recalculate and set the account amount whenever the data changes
       onChange('ac_amt', totalAmount);
     }, [totalAmount]);
-
-    const calculateAndSetAccountAmount = () => {
-      if (data.detail) {
-        const totalAmount = calculateTotalAmount(data.detail);
-        onChange('ac_amt', totalAmount);
-      }
-    };
-
-    const calculateTotalAmount = (details) => {
-      if (details) {
-        return details.reduce((total, detail) => {
-          const amount = detail.qty * detail.rate;
-          return total + amount;
-        }, 0);
-      }
-      return 0;
-    };
   
     // Function to generate a random 5-letter number
     const generateRandomVrNo = () => {
@@ -65,7 +47,6 @@ const HeaderSection = ({ data, onChange, totalAmount }) => {
           <label htmlFor="voucherDate">Voucher Date</label>
         </div>
         <div className="header-inputs form-floating">
-          {/* Dropdown for status */}
           <select
             className="form-select"
             id="status"

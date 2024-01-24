@@ -53,7 +53,7 @@ const SalesEntryForm = () => {
         [name]: value,
       };
 
-      // Update the total amount whenever the detail changes
+      // Update the total amount whenever the detail data changes
       const newTotalAmount = getTotalAmount(updatedDetail);
       setTotalAmount(newTotalAmount);
 
@@ -65,13 +65,12 @@ const SalesEntryForm = () => {
   };
 
   const handleAddDetail = () => {
-    // Create a unique item code for the new row
     const uniqueItemCode = `NEW_ITEM_${localFormData.detail.length + 1}`;
 
     // Create a new empty detail object with the unique item code
     const newDetail = {
       item_code: uniqueItemCode,
-      item_name: '', // You may want to set a default value or fetch it from the server
+      item_name: '',
       description: '',
       qty: 0,
       rate: 0,
@@ -165,8 +164,8 @@ const SalesEntryForm = () => {
     }
   };
 
+  //print the data using jsPDF
   const handlePrint = () => {
-    // Create a new jsPDF instance
     const pdfDoc = new jsPDF();
 
     // Add content to the PDF
@@ -188,7 +187,11 @@ const SalesEntryForm = () => {
 
   return (
     <div className="sales-entry-form">
-      <HeaderSection data={localFormData.header} onChange={handleHeaderChange} totalAmount={totalAmount} />
+      <HeaderSection 
+        data={localFormData.header} 
+        onChange={handleHeaderChange} 
+        totalAmount={totalAmount} 
+      />
       {localFormData.detail && (
         <DetailSection
           data={localFormData.detail}
@@ -196,7 +199,6 @@ const SalesEntryForm = () => {
           onAdd={handleAddDetail}
           onRemove={handleRemoveDetail}
           updateTotalAmount={setTotalAmount}
-
         />
       )}
 

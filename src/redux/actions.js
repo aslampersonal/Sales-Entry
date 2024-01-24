@@ -4,3 +4,4 @@ export const saveSalesData = (data) => {
     payload: data,
   };
 };
+

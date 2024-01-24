@@ -25,11 +25,6 @@ const DetailSection = ({ data, onChange, onAdd, onRemove, updateTotalAmount, tot
       return total + amount;
     }, 0);
 
-    // Update the total amount in the parent component
-    if (totalAmount !== updateTotalAmount) {
-      updateTotalAmount(totalAmount);
-    }
-
     return totalAmount;
   };
 
@@ -43,7 +38,7 @@ const DetailSection = ({ data, onChange, onAdd, onRemove, updateTotalAmount, tot
       // Update the state and Redux state for the specific row
       onChange(index, 'item_code', value);
       onChange(index, 'item_name', itemName);
-      onChange(index, 'description', ''); // Reset description when item code changes
+      onChange(index, 'description', '');
     }
   };
 
