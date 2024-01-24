@@ -1,0 +1,113 @@
+.sales-entry-form {
+    padding: 2rem;
+    margin: 0;
+}
+
+.button {
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+/* Header Section */
+ .header-section {
+    margin-bottom: 20px;
+  }
+
+  .header-section .header-inputs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header-section .header-inputs-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  .header-section .header-inputs-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  .header-section label {
+    padding-left: 1.5rem;
+  }
+  
+  .header-section input {
+    margin-left: 1rem;
+    padding: 8px;
+  }
+  
+
+  /* Detail section */
+  .detail-section {
+    margin-top: 20px;
+  }
+  
+  .detail-section h3 {
+    margin-bottom: 2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  table td input {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+  
+  table td button {
+    padding: 6px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 8px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .added-details {
+    margin-top: 20px;
+  }
+  
+  .added-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .added-details li {
+    margin-bottom: 8px;
+  }
+
+  #newbtn, #savebtn, #printbtn {
+    margin-left: 1rem;
+    width: 5rem;
+  }
+
+  #newbtn:hover, #savebtn:hover, #printbtn:hover {
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+  }
+
